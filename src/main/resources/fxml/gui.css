@@ -1,0 +1,29 @@
+.root {
+    -fx-font-size: 18;
+    -fx-font-weight: bold;
+}
+
+#boardGUI{
+    -fx-alignment: center;
+}
+
+.square {
+    -fx-border-style: solid;
+}
+.square.light {
+    -fx-background-color: bisque;
+}
+
+.square.dark {
+    -fx-background-color: chocolate;
+}
+.square.light:hover, .square.dark:hover {
+    -fx-background-color: #FAFA33;
+}
+.selectable {
+    -fx-border-width: 3;
+}
+.square.taken{
+    -fx-border-color: blue;
+    -fx-background-color: gray;
+}

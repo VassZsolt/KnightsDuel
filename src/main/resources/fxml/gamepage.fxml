@@ -1,0 +1,79 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.*?>
+<?import javafx.scene.layout.*?>
+
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Button?>
+<AnchorPane xmlns="http://javafx.com/javafx/16" xmlns:fx="http://javafx.com/fxml/1" fx:controller="GUI.GameController"
+            prefHeight="900.0" prefWidth="1200.0" stylesheets="@gui.css">
+      <GridPane fx:id="boardGUI"  stylesheets="@gui.css" alignment="CENTER" layoutX="22.0" layoutY="20.0">
+          <columnConstraints>
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="100.0" prefWidth="100.0" />
+              <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          </columnConstraints>
+          <rowConstraints>
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="100.0" prefHeight="100.0" vgrow="SOMETIMES" />
+              <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+          </rowConstraints>
+          <padding>
+              <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+          </padding>
+          <!--
+          <Label layoutX="10.0" layoutY="17.0" text="A" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <Label layoutX="110.0" layoutY="17.0" text="B" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <Label layoutX="210.0" layoutY="17.0" text="C" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <Label layoutX="310.0" layoutY="17.0" text="D" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <Label layoutX="10.0" layoutY="17.0" text="E" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <Label layoutX="410.0" layoutY="17.0" text="F" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <Label layoutX="610.0" layoutY="17.0" text="G" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <Label layoutX="710.0" layoutY="17.0" text="H" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.valignment="CENTER" />
+          <Label layoutX="110.0" layoutY="17.0" text="A" GridPane.columnIndex="1" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+          <Label layoutX="810.0" layoutY="17.0" text="B" GridPane.columnIndex="2" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+          <Label layoutX="210.0" layoutY="17.0" text="C" GridPane.columnIndex="3" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+          <Label layoutX="310.0" layoutY="17.0" text="D" GridPane.columnIndex="4" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+          <Label layoutX="410.0" layoutY="17.0" text="E" GridPane.columnIndex="5" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+          <Label layoutX="510.0" layoutY="17.0" text="F" GridPane.columnIndex="6" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+          <Label layoutX="610.0" layoutY="17.0" text="G" GridPane.columnIndex="7" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+          <Label layoutX="710.0" layoutY="17.0" text="H" GridPane.columnIndex="8" GridPane.halignment="CENTER" GridPane.rowIndex="9" GridPane.valignment="CENTER" />
+          <Label layoutX="200.0" layoutY="287.0" text="8" GridPane.halignment="right" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+          <Label layoutX="210.0" layoutY="287.0" text="7" GridPane.halignment="right" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+          <Label layoutX="310.0" layoutY="287.0" text="6" GridPane.halignment="right" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+          <Label layoutX="410.0" layoutY="287.0" text="5" GridPane.halignment="right" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+          <Label layoutX="510.0" layoutY="287.0" text="4" GridPane.halignment="right" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+          <Label layoutX="610.0" layoutY="287.0" text="3" GridPane.halignment="right" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+          <Label layoutX="710.0" layoutY="287.0" text="2" GridPane.halignment="right" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+          <Label layoutX="810.0" layoutY="287.0" text="1" GridPane.halignment="right" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+          <Label layoutX="10.0" layoutY="47.0" text="8" GridPane.columnIndex="9" GridPane.halignment="left" GridPane.rowIndex="1" GridPane.valignment="CENTER" />
+          <Label layoutX="10.0" layoutY="77.0" text="7" GridPane.columnIndex="9" GridPane.halignment="left" GridPane.rowIndex="2" GridPane.valignment="CENTER" />
+          <Label layoutX="10.0" layoutY="107.0" text="6" GridPane.columnIndex="9" GridPane.halignment="left" GridPane.rowIndex="3" GridPane.valignment="CENTER" />
+          <Label layoutX="10.0" layoutY="137.0" text="5" GridPane.columnIndex="9" GridPane.halignment="left" GridPane.rowIndex="4" GridPane.valignment="CENTER" />
+          <Label layoutX="10.0" layoutY="167.0" text="4" GridPane.columnIndex="9" GridPane.halignment="left" GridPane.rowIndex="5" GridPane.valignment="CENTER" />
+          <Label layoutX="10.0" layoutY="257.0" text="3" GridPane.columnIndex="9" GridPane.halignment="left" GridPane.rowIndex="6" GridPane.valignment="CENTER" />
+          <Label layoutX="10.0" layoutY="197.0" text="2" GridPane.columnIndex="9" GridPane.halignment="left" GridPane.rowIndex="7" GridPane.valignment="CENTER" />
+          <Label layoutX="10.0" layoutY="227.0" text="1" GridPane.columnIndex="9" GridPane.halignment="left" GridPane.rowIndex="8" GridPane.valignment="CENTER" />
+          -->
+      </GridPane>
+
+    <Button layoutX="1025.0" layoutY="50.0" mnemonicParsing="false" text="New Game" onAction="#handleNewGame" textFill="CHOCOLATE"/>
+    <Button layoutX="1022.0" layoutY="150.0" mnemonicParsing="false" text="Load Game" onAction="#handleLoadGame" textFill="CHOCOLATE"/>
+    <Button layoutX="1022.0" layoutY="100.0" mnemonicParsing="false" text="Save Game"  onAction="#handleSaveGame" textFill="CHOCOLATE"/>
+    <Button id="next" layoutX="1022.0" layoutY="200.0" prefHeight="33.0" prefWidth="138.0" text="Exit Game" mnemonicParsing="false" onAction="#handleExit" textFill="CHOCOLATE"/>
+</AnchorPane>
